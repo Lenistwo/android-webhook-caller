@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="calltrack.sample.myapplication.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="Inbound/Ringing:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/inbound" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/inbountET"
+            android:maxLines="1"
+            android:background="@drawable/border_edittext"
+            android:padding="10dp"
+            android:hint="Webhook incoming url"
+            />
+
+        <TextView
+            android:text="PickedUp:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/textView2" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:background="@drawable/border_edittext"
+            android:ems="10"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:id="@+id/pickedupET"
+            android:hint="Webhook picked url"
+             />
+
+        <TextView
+            android:text="Call Ended:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/callendTV" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/callendET"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:background="@drawable/border_edittext"
+            android:hint="Webhook callend url" />
+
+        <Button
+            android:text="Save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAllCaps="false"
+            android:id="@+id/submitBT" />
+
+        <TextView
+            android:text="The accepted variables which will be replaced within the webhook URL are:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/textView" />
+
+        <TextView
+            android:text="{phone_number}\n{caller_name}\n{line}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:id="@+id/textView4" />
+    </LinearLayout>
+</RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
